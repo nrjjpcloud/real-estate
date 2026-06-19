@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>AJ Realtors</title>
+      <link
+         rel="icon"
+         type="image/png"
+         sizes="16x16"
+         href="images/favicon-16x16.png"
+      />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+         rel="stylesheet"
+      />
+      <link
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+         rel="stylesheet"
+      />
+
+      <link
+         rel="stylesheet"
+         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.theme.default.min.css"
+      />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.carousel.min.css"
+      />
+
+      <link
+         rel="stylesheet"
+         href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/css/bootstrap-select.min.css"
+      />
+      <link
+         href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+         rel="stylesheet"
+         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+         crossorigin="anonymous"
+      />
+
+      <link rel="stylesheet" href="css/style.css" />
+   </head>
+   <body>
+      <header>
+         <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+            <div class="container">
+               <a class="navbar-brand" href="index.html">
+                  <img
+                     src="Assets/images/logo.png"
+                     alt="Logo"
+                     class="img-fluid logo"
+                  />
+               </a>
+               <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+               >
+                  <span class="navbar-toggler-icon"></span>
+               </button>
+               <div
+                  class="collapse navbar-collapse"
+                  id="navbarSupportedContent"
+               >
+                  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                     <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Buy</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">Sell</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">Rent</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">Plan and Pricing</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">Contact us</a>
+                     </li>
+                  </ul>
+                  <form class="d-flex">
+                     <button
+                        class="btn btn-credential me-3"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#loginModal"
+                     >
+                        Register / Login
+                     </button>
+                     <button
+                        class="btn btn-credential"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#loginModal"
+                     >
+                        Post your Property
+                     </button>
+                  </form>
+               </div>
+            </div>
+         </nav>
+      </header>
+      <!-- headerend -->
+      <section class="primary-details py-5">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-3">
+                  <div class="primary-sidenav">
+                     <div class="stepper flex-column bg-light py-4 p-4 rounded">
+                        <div class="d-flex step-column">
+                           <div class="step active" id="step-1-indicator"></div>
+                           <div class="step-title">
+                              <p class="active">Basic Details</p>
+                              <span>Step 1</span>
+                           </div>
+                        </div>
+                        <div class="d-flex step-column">
+                           <div class="step" id="step-2-indicator"></div>
+                           <div class="step-title">
+                              <p>Location Details</p>
+                              <span>Step 2</span>
+                           </div>
+                        </div>
+                        <div class="d-flex step-column">
+                           <div class="step" id="step-3-indicator"></div>
+                           <div class="step-title">
+                              <p>Property Profile</p>
+                              <span>Step 3</span>
+                           </div>
+                        </div>
+                        <div class="d-flex step-column">
+                           <div class="step" id="step-4-indicator"></div>
+                           <div class="step-title">
+                              <p>Photos, Videos & Voice-over</p>
+                              <span>Step 4</span>
+                           </div>
+                        </div>
+                        <div class="d-flex step-column">
+                           <div class="step" id="step-5-indicator"></div>
+                           <div class="step-title">
+                              <p>Amenities Section</p>
+                              <span>Step 5</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- sidenav end -->
+               <div class="col-lg-6 ps-lg-5">
+                  <div class="primary-list-details">
+                     <form id="multiStepForm">
+                        <!-- Step 1 Content -->
+                        <div class="step-content active" id="step-1-content">
+                           <div class="step-header">
+                              <h3>Welcome Back John Smith</h3>
+                              <p class="lead c-gray">
+                                 Fill out the basic details
+                              </p>
+                           </div>
+                           <div class="step-body py-5">
+                              <p class="fw-bold mb-3">I'm looking to</p>
+                              <div class="step-select-btn mb-5">
+                                 <button
+                                    type="button"
+                                    class="btn btnlight active"
+                                 >
+                                    Sell
+                                 </button>
+                                 <button type="button" class="btn btnlight">
+                                    Rent / Lease
+                                 </button>
+                                 <button type="button" class="btn btnlight">
+                                    PG
+                                 </button>
+                              </div>
+                              <div class="property-list">
+                                 <h5>What kind of property do you have?</h5>
+                                 <div class="main-options mt-4">
+                                    <label class="pe-5">
+                                       <input
+                                          type="radio"
+                                          name="mainPropertyType"
+                                          value="Residential"
+                                          checked
+                                          onclick="toggleCategory('residential')"
+                                       />
+                                       Residential
+                                    </label>
+                                    <label>
+                                       <input
+                                          type="radio"
+                                          name="mainPropertyType"
+                                          value="Commercial"
+                                          onclick="toggleCategory('commercial')"
+                                       />
+                                       Commercial
+                                    </label>
+                                 </div>
+                                 <!-- Residential Categories -->
+                                 <div
+                                    id="residentialCategories"
+                                    class="category-group"
+                                 >
+                                    <div class="d-flex flex-wrap mt-4">
+                                       <div class="category-pill">
+                                          <button
+                                             type="button"
+                                             class="btn btnlight active"
+                                          >
+                                             Flat/Apartment
+                                          </button>
+                                       </div>
+                                       <div class="category-pill">
+                                          <button
+                                             type="button"
+                                             class="btn btnlight"
+                                          >
+                                             Independent House / Villa
+                                          </button>
+                                       </div>
+                                       <div class="category-pill">
+                                          <button
+                                             type="button"
+                                             class="btn btnlight"
+                                          >
+                                             Independent / Builder Floor
+                                          </button>
+                                       </div>
+                                       <div class="category-pill">
+                                          <button
+                                             type="button"
+                                             class="btn btnlight"
+                                          >
+                                             Plot / Land
+                                          </button>
+                                       </div>
+                                       <div class="category-pill">
+                                          <button
+                                             type="button"
+                                             class="btn btnlight"
+                                          >
+                                             1 RK / Studio Apartment
+                                          </button>
+                                       </div>
+                                       <div class="category-pill">
+                                          <button
+                                             type="button"
+                                             class="btn btnlight"
+                                          >
+                                             Serviced Apartment
+                                          </button>
+                                       </div>
+                                       <div class="category-pill">
+                                          <button
+                                             type="button"
+                                             class="btn btnlight"
+                                          >
+                                             Farmhouse
+                                          </button>
+                                       </div>
+                                       <div class="category-pill">
+                                          <button
+                                             type="button"
+                                             class="btn btnlight"
+                                          >
+                                             Other
+                                          </button>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <!-- Commercial Categories -->
+                                 <div
+                                    id="commercialCategories"
+                                    class="category-group"
+                                    style="display: none"
+                                 >
+                                    <div class="d-flex flex-wrap mt-4">
+                                       <div class="category-pill">
+                                          <button
+                                             type="button"
+                                             class="btn btnlight"
+                                          >
+                                             Office
+                                          </button>
+                                       </div>
+                                       <div class="category-pill">
+                                          <button
+                                             type="button"
+                                             class="btn btnlight"
+                                          >
+                                             Retail
+                                          </button>
+                                       </div>
+                                       <div class="category-pill">
+                                          <button
+                                             type="button"
+                                             class="btn btnlight"
+                                          >
+                                             Plot / Land
+                                          </button>
+                                       </div>
+                                       <div class="category-pill">
+                                          <button
+                                             type="button"
+                                             class="btn btnlight"
+                                          >
+                                             Storage
+                                          </button>
+                                       </div>
+                                       <div class="category-pill">
+                                          <button
+                                             type="button"
+                                             class="btn btnlight"
+                                          >
+                                             Industry
+                                          </button>
+                                       </div>
+                                       <div class="category-pill">
+                                          <button
+                                             type="button"
+                                             class="btn btnlight"
+                                          >
+                                             Hospitality
+                                          </button>
+                                       </div>
+                                       <div class="category-pill">
+                                          <button
+                                             type="button"
+                                             class="btn btnlight"
+                                          >
+                                             Other
+                                          </button>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <!-- Step 2 Content -->
+                        <div class="step-content" id="step-2-content">
+                           <div class="step-header">
+                              <h3 class="mb-2">
+                                 Where is your property located?
+                              </h3>
+                              <p class="lead c-gray">
+                                 An accurate location helps you connect with the
+                                 right buyers
+                              </p>
+                           </div>
+                           <div class="step-body py-5">
+                              <div class="location">
+                                 <div class="d-flex">
+                                    <div class="form-group w-100 me-3">
+                                       <input
+                                          type="text"
+                                          class="form-control"
+                                          placeholder="City"
+                                       />
+                                    </div>
+                                    <div class="form-group w-100 ms-3">
+                                       <div class="location-container">
+                                          <button
+                                             class="pick-location-btn"
+                                             onclick="getLocation()"
+                                          >
+                                             <span
+                                                ><i
+                                                   class="fa-solid fa-location-crosshairs"
+                                                ></i
+                                             ></span>
+                                             Pick My Location
+                                          </button>
+                                          <div
+                                             class="location-result"
+                                             id="locationResult"
+                                          ></div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="form-group mb-3">
+                                    <input
+                                       type="text"
+                                       class="form-control"
+                                       placeholder="Locality"
+                                    />
+                                 </div>
+                                 <div class="form-group mb-3">
+                                    <input
+                                       type="text"
+                                       class="form-control"
+                                       placeholder="Sub LOcality(Optional)"
+                                    />
+                                 </div>
+                                 <div class="form-group mb-3">
+                                    <input
+                                       type="text"
+                                       class="form-control"
+                                       placeholder="Apartment / Society"
+                                    />
+                                 </div>
+                                 <div class="form-group mb-3">
+                                    <input
+                                       type="text"
+                                       class="form-control"
+                                       placeholder="House number (Optional)"
+                                    />
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <!-- Step 3 Content -->
+                        <div class="step-content" id="step-3-content">
+                           <h2 class="mb-3">Tell us about your property</h2>
+                           <p class="fw-bold mb-3">Your Apartment is a</p>
+                           <div class="category-pill mb-5">
+                              <button type="button" class="btn btnlight">
+                                 4 BHK
+                              </button>
+                              <button type="button" class="btn btnlight active">
+                                 Other
+                              </button>
+                           </div>
+                           <div class="room-details mb-5">
+                              <h6 class="fw-bold">Add Room Details</h6>
+                              <div class="itinary-details mt-3">
+                                 <p class="mb-2 fw-500">No. of Bedrooms</p>
+                                 <div class="number-list">
+                                    <button
+                                       type="button"
+                                       class="btn btnlight square"
+                                    >
+                                       1
+                                    </button>
+                                    <button
+                                       type="button"
+                                       class="btn btnlight square"
+                                    >
+                                       2
+                                    </button>
+                                    <button
+                                       type="button"
+                                       class="btn btnlight square"
+                                    >
+                                       3
+                                    </button>
+                                    <button
+                                       type="button"
+                                       class="btn btnlight square"
+                                    >
+                                       4
+                                    </button>
+                                    <p class="mt-2">
+                                       <a class="btn btn-text p-0"
+                                          >+ Add Other</a
+                                       >
+                                    </p>
+                                 </div>
+                              </div>
+                              <div class="itinary-details mt-3">
+                                 <p class="mb-2 fw-500">No. of Bedrooms</p>
+                                 <div class="number-list">
+                                    <button
+                                       type="button"
+                                       class="btn btnlight square"
+                                    >
+                                       1
+                                    </button>
+                                    <button
+                                       type="button"
+                                       class="btn btnlight square"
+                                    >
+                                       2
+                                    </button>
+                                    <button
+                                       type="button"
+                                       class="btn btnlight square"
+                                    >
+                                       3
+                                    </button>
+                                    <button
+                                       type="button"
+                                       class="btn btnlight square"
+                                    >
+                                       4
+                                    </button>
+                                    <p class="mt-3">
+                                       <a class="btn btn-text p-0"
+                                          >+ Add Other</a
+                                       >
+                                    </p>
+                                 </div>
+                              </div>
+                              <div class="itinary-details">
+                                 <p class="mb-2 fw-500">Balconies</p>
+                                 <div class="number-list">
+                                    <button
+                                       type="button"
+                                       class="btn btnlight square"
+                                    >
+                                       1
+                                    </button>
+                                    <button
+                                       type="button"
+                                       class="btn btnlight square"
+                                    >
+                                       2
+                                    </button>
+                                    <button
+                                       type="button"
+                                       class="btn btnlight square"
+                                    >
+                                       3
+                                    </button>
+                                    <button
+                                       type="button"
+                                       class="btn btnlight square"
+                                    >
+                                       4
+                                    </button>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="area-details mb-5">
+                              <div class="area-head">
+                                 <h6 class="fw-bold">Add Area Details</h6>
+                                 <small
+                                    >Atleast one area type is mandatory</small
+                                 >
+                              </div>
+                              <div class="form-field mt-3">
+                                 <div class="d-flex gap-3 mb-3">
+                                    <div class="form-group">
+                                       <input
+                                          type="text"
+                                          placeholder="Carpet Area"
+                                          class="form-control"
+                                       />
+                                    </div>
+                                    <div class="form-group">
+                                       <select class="form-select">
+                                          <option selected>Sq.m</option>
+                                          <option value="1">Sq.ft</option>
+                                          <option value="2">Acres</option>
+                                          <option value="3">Cents</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 <div class="d-flex gap-3">
+                                    <p>
+                                       <a class="btn btn-text p-0"
+                                          >+ Add Built-up Area</a
+                                       >
+                                    </p>
+                                    <p>
+                                       <a class="btn btn-text p-0"
+                                          >+ Add Super Built-up Area</a
+                                       >
+                                    </p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="area-details mb-5">
+                              <div class="area-head">
+                                 <h6 class="fw-bold">Floor Details</h6>
+                                 <small
+                                    >Total no of floors and your floor
+                                    details</small
+                                 >
+                              </div>
+                              <div class="form-field mt-3">
+                                 <div class="d-flex gap-3 mb-3">
+                                    <div class="form-group">
+                                       <input
+                                          type="text"
+                                          placeholder="Total Floors"
+                                          class="form-control"
+                                       />
+                                    </div>
+                                    <div class="form-group">
+                                       <select class="form-select">
+                                          <option selected>Basement</option>
+                                          <option value="1">
+                                             Lower Ground
+                                          </option>
+                                          <option value="2">Ground</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="area-details mb-5">
+                              <div class="area-head mb-3">
+                                 <h6 class="fw-bold">Availability Status</h6>
+                              </div>
+                              <div class="category-pill mb-5">
+                                 <button type="button" class="btn btnlight">
+                                    Ready to move
+                                 </button>
+                                 <button
+                                    type="button"
+                                    class="btn btnlight active"
+                                 >
+                                    Under COnstruction
+                                 </button>
+                              </div>
+                              <div>
+                                 <div class="area-head mb-3">
+                                    <h6 class="fw-bold">Possession By</h6>
+                                 </div>
+                                 <div class="form-group w-50">
+                                    <select class="form-select">
+                                       <option selected>Expected By</option>
+                                       <option value="1">
+                                          Within 3 Months
+                                       </option>
+                                       <option value="2">
+                                          Within 6 Months
+                                       </option>
+                                       <option value="3">By 2025</option>
+                                    </select>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="ownership mb-5">
+                              <div class="area-head mb-3">
+                                 <h6 class="fw-bold">Ownership</h6>
+                              </div>
+                              <div class="category-pill mb-5">
+                                 <button
+                                    type="button"
+                                    class="btn btnlight active"
+                                 >
+                                    Freehold
+                                 </button>
+                                 <button type="button" class="btn btnlight">
+                                    Leasehold
+                                 </button>
+                                 <button type="button" class="btn btnlight">
+                                    Co-operative Society
+                                 </button>
+                                 <button type="button" class="btn btnlight">
+                                    Power of Attorney
+                                 </button>
+                              </div>
+                           </div>
+                           <div class="Price Details mb-5">
+                              <div class="area-head mb-3">
+                                 <h6 class="fw-bold">Price Details</h6>
+                              </div>
+                              <div class="d-flex gap-3 mb-3 align-items-center">
+                                 <div class="form-group">
+                                    <input
+                                       type="text"
+                                       placeholder="Expected Price"
+                                       class="form-control"
+                                    />
+                                 </div>
+                                 <p class="c-gray">
+                                    <small
+                                       ><i
+                                          class="fa-solid fa-indian-rupee-sign pe-2"
+                                       ></i
+                                       >Price per Sq.mt</small
+                                    >
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="price-checklist mb-5">
+                              <div class="d-flex gap-3">
+                                 <div class="form-check">
+                                    <input
+                                       class="form-check-input"
+                                       type="checkbox"
+                                       value=""
+                                       id="flexCheckChecked"
+                                       checked
+                                    />
+                                    <label
+                                       class="form-check-label"
+                                       for="flexCheckChecked"
+                                    >
+                                       All inclusive price
+                                    </label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input
+                                       class="form-check-input"
+                                       type="checkbox"
+                                       value=""
+                                       id="flexCheckChecked1"
+                                       checked
+                                    />
+                                    <label
+                                       class="form-check-label"
+                                       for="flexCheckChecked1"
+                                    >
+                                       Tax and Govt. charges excluded
+                                    </label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input
+                                       class="form-check-input"
+                                       type="checkbox"
+                                       value=""
+                                       id="flexCheckChecked2"
+                                       checked
+                                    />
+                                    <label
+                                       class="form-check-label"
+                                       for="flexCheckChecked2"
+                                    >
+                                       Price Negotiable
+                                    </label>
+                                 </div>
+                              </div>
+                              <p>
+                                 <a class="btn btn-text p-0 mt-3"
+                                    >+ Add more pricing details</a
+                                 >
+                              </p>
+                           </div>
+                           <div class="Price Details mb-5">
+                              <div class="area-head mb-3">
+                                 <h6 class="fw-bold">
+                                    What makes your property unique
+                                 </h6>
+                              </div>
+                              <div class="form-group">
+                                 <textarea class="form-control" rows="3">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                                 </textarea>
+                                 <small>Min. 30 characters required</small>
+                              </div>
+                           </div>
+                        </div>
+
+                        <!-- Step 4 Content -->
+                        <div class="step-content" id="step-4-content">
+                           <h2>Step 4: Property Profile</h2>
+                           <label for="propertyType">Property Type:</label>
+                           <select
+                              id="propertyType"
+                              name="propertyType"
+                              required
+                           >
+                              <option value="">Select type...</option>
+                              <option value="Apartment">Apartment</option>
+                              <option value="Villa">Villa</option>
+                              <option value="Independent House">
+                                 Independent House
+                              </option>
+                           </select>
+                        </div>
+
+                        <!-- Step 5 Content -->
+                        <div class="step-content" id="step-5-content">
+                           <h2>Step 5: Property Profile</h2>
+                           <label for="propertyType">Property Type:</label>
+                           <select
+                              id="propertyType"
+                              name="propertyType"
+                              required
+                           >
+                              <option value="">Select type...</option>
+                              <option value="Apartment">Apartment</option>
+                              <option value="Villa">Villa</option>
+                              <option value="Independent House">
+                                 Independent House
+                              </option>
+                           </select>
+                        </div>
+
+                        <!-- Buttons to navigate -->
+                        <div class="step-navigation">
+                           <button
+                              type="button"
+                              class="btn btnlight"
+                              id="prevBtn"
+                              onclick="prevStep()"
+                           >
+                              Back
+                           </button>
+                           <button
+                              type="button"
+                              class="btn btn-dark"
+                              id="nextBtn"
+                              onclick="nextStep()"
+                           >
+                              Continue
+                           </button>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+               <div class="col-lg-3">
+                  <div class="primary-right-col"></div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- slidersection -->
+
+      <!-- <section class="exclusive-listing">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-12">
+                  <div class="bg-light-gray ps-lg-5 py-5">
+                     <div class="main-heading pb-5">
+                        <h1 class="title-head">
+                           AJ Realtors' Exclusive Selection
+                        </h1>
+                        <p class="pt-4">
+                           Get an early look at exclusive listings before they
+                           become available on the market.
+                        </p>
+                     </div>
+                     <div class="exclusive-selection owl-carousel owl-theme">
+                        <div class="card-list card-shadow">
+                           <div class="card-list-image card-image">
+                              <img
+                                 src="Assets/images/card-list-4.png"
+                                 alt="card-list"
+                                 class="img-fluid"
+                              />
+                           </div>
+                           <div class="card-list-body">
+                              <div class="card-list-head">
+                                 <p>
+                                    Lorem Ipsum is simply dummy text of the
+                                    printing.
+                                 </p>
+                              </div>
+                              <div
+                                 class="d-flex align-items-center justify-content-between py-3"
+                              >
+                                 <div class="card-list-features">
+                                    <p>
+                                       <span>4 Beds </span>
+                                       <span>4 Baths </span>
+                                       <span>2100 Sqft </span>
+                                    </p>
+                                    <p class="location">
+                                       <span><i class="bi bi-geo-alt"></i></span
+                                       ><span>Location</span>
+                                    </p>
+                                 </div>
+                                 <div class="card-list-price">
+                                    <p>
+                                       <i class="bi bi-currency-dollar"></i>700
+                                    </p>
+                                 </div>
+                              </div>
+                              <div
+                                 class="card-list-footer d-flex justify-content-end"
+                              >
+                                 <button type="button" class="btn btn-theme">
+                                    View
+                                 </button>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="card-list card-shadow">
+                           <div class="card-list-image card-image">
+                              <img
+                                 src="Assets/images/card-list-2.png"
+                                 alt="card-list"
+                                 class="img-fluid"
+                              />
+                           </div>
+                           <div class="card-list-body">
+                              <div class="card-list-head">
+                                 <p>
+                                    Lorem Ipsum is simply dummy text of the
+                                    printing.
+                                 </p>
+                              </div>
+                              <div
+                                 class="d-flex align-items-center justify-content-between py-3"
+                              >
+                                 <div class="card-list-features">
+                                    <p>
+                                       <span>4 Beds </span>
+                                       <span>4 Baths </span>
+                                       <span>2100 Sqft </span>
+                                    </p>
+                                    <p class="location">
+                                       <span><i class="bi bi-geo-alt"></i></span
+                                       ><span>Location</span>
+                                    </p>
+                                 </div>
+                                 <div class="card-list-price">
+                                    <p>
+                                       <i class="bi bi-currency-dollar"></i>700
+                                    </p>
+                                 </div>
+                              </div>
+                              <div
+                                 class="card-list-footer d-flex justify-content-end"
+                              >
+                                 <button type="button" class="btn btn-theme">
+                                    View
+                                 </button>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="card-list card-shadow">
+                           <div class="card-list-image card-image">
+                              <img
+                                 src="Assets/images/card-list-3.png"
+                                 alt="card-list"
+                                 class="img-fluid"
+                              />
+                           </div>
+                           <div class="card-list-body">
+                              <div class="card-list-head">
+                                 <p>
+                                    Lorem Ipsum is simply dummy text of the
+                                    printing.
+                                 </p>
+                              </div>
+                              <div
+                                 class="d-flex align-items-center justify-content-between py-3"
+                              >
+                                 <div class="card-list-features">
+                                    <p>
+                                       <span>4 Beds </span>
+                                       <span>4 Baths </span>
+                                       <span>2100 Sqft </span>
+                                    </p>
+                                    <p class="location">
+                                       <span><i class="bi bi-geo-alt"></i></span
+                                       ><span>Location</span>
+                                    </p>
+                                 </div>
+                                 <div class="card-list-price">
+                                    <p>
+                                       <i class="bi bi-currency-dollar"></i>700
+                                    </p>
+                                 </div>
+                              </div>
+                              <div
+                                 class="card-list-footer d-flex justify-content-end"
+                              >
+                                 <button type="button" class="btn btn-theme">
+                                    View
+                                 </button>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="card-list card-shadow">
+                           <div class="card-list-image card-image">
+                              <img
+                                 src="Assets/images/card-list-2.png"
+                                 alt="card-list"
+                                 class="img-fluid"
+                              />
+                           </div>
+                           <div class="card-list-body">
+                              <div class="card-list-head">
+                                 <p>
+                                    Lorem Ipsum is simply dummy text of the
+                                    printing.
+                                 </p>
+                              </div>
+                              <div
+                                 class="d-flex align-items-center justify-content-between py-3"
+                              >
+                                 <div class="card-list-features">
+                                    <p>
+                                       <span>4 Beds </span>
+                                       <span>4 Baths </span>
+                                       <span>2100 Sqft </span>
+                                    </p>
+                                    <p class="location">
+                                       <span><i class="bi bi-geo-alt"></i></span
+                                       ><span>Location</span>
+                                    </p>
+                                 </div>
+                                 <div class="card-list-price">
+                                    <p>
+                                       <i class="bi bi-currency-dollar"></i>700
+                                    </p>
+                                 </div>
+                              </div>
+                              <div
+                                 class="card-list-footer d-flex justify-content-end"
+                              >
+                                 <button type="button" class="btn btn-theme">
+                                    View
+                                 </button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-12 mt-5 d-flex justify-content-end">
+                        <button type="button" class="btn btn-theme-border me-5">
+                           Show all
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section> -->
+
+      <footer class="footer py-5">
+         <div class="container">
+            <div class="row pt-5">
+               <div class="col-lg-3">
+                  <div class="footer-about">
+                     <div class="footer-logo">
+                        <img
+                           src="Assets/images/logo.png"
+                           alt="Logo"
+                           class="img-fluid"
+                        />
+                     </div>
+                     <div class="footer-about py-4">
+                        <p>
+                           Lorem Ipsum is simply dummy text of the printing and
+                           typesetting industry. Lorem Ipsum has been the
+                           industry's standard dummy text ever since<br /><br />
+                           Lorem Ipsum is simply dummy text of the printing and
+                           typesetting industry. Lorem Ipsum has been the
+                           industry's standard dummy text ever since
+                        </p>
+                     </div>
+                     <div class="footer-social pt-3">
+                        <span
+                           ><a href="#"
+                              ><i class="fa-brands fa-facebook-f"></i></a
+                        ></span>
+                        <span
+                           ><a href="#"
+                              ><i class="fa-brands fa-x-twitter"></i></a
+                        ></span>
+                        <span
+                           ><a href="#"
+                              ><i class="fa-brands fa-instagram"></i></a
+                        ></span>
+                     </div>
+                  </div>
+               </div>
+               <div class="col ps-lg-5">
+                  <div class="footer-menu">
+                     <div class="h3">Company</div>
+                     <ul class="list-unstyled pt-3">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Sales Leadership</a></li>
+                        <li><a href="#">Investors</a></li>
+                        <li><a href="#">Join as an agent</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Offices</a></li>
+                        <li><a href="#">Newsroom</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col">
+                  <div class="footer-menu">
+                     <div class="h3">Company</div>
+                     <ul class="list-unstyled pt-3">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Sales Leadership</a></li>
+                        <li><a href="#">Investors</a></li>
+                        <li><a href="#">Join as an agent</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Offices</a></li>
+                        <li><a href="#">Newsroom</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-lg-4">
+                  <div class="footer-policy">
+                     <p>
+                        Do Not Sell or Share My Personal Information, Terms of
+                        Service, Privacy Center, Scam Avoidance, Responsible
+                        Disclosure, Compass is an E-Verify employer, Notice for
+                        California Applicants, California COVID-19 Rules of
+                        Entry, and Your CA Privacy Rights
+                     </p>
+                     <div class="footer-btn pt-5">
+                        <button type="button" class="btn btn-theme me-2">
+                           Buy
+                        </button>
+                        <button type="button" class="btn btn-theme me-2">
+                           Rent
+                        </button>
+                        <button type="button" class="btn btn-theme">
+                           Sell
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+
+      <!-- Modal -->
+      <div
+         class="modal fade login-modal"
+         id="loginModal"
+         tabindex="-1"
+         aria-labelledby="exampleModalLabel"
+         aria-hidden="true"
+      >
+         <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button
+                     type="button"
+                     class="btn-close"
+                     data-bs-dismiss="modal"
+                     aria-label="Close"
+                  >
+                     <i class="bi bi-x-lg"></i>
+                  </button>
+               </div>
+               <div class="modal-body">
+                  <div class="row">
+                     <div class="col-lg-5">
+                        <div class="left-banner h-100">
+                           <img
+                              src="Assets/images/login_img.png"
+                              alt="Login banner"
+                              class="img-fluid"
+                           />
+                        </div>
+                     </div>
+                     <div class="col-lg-7">
+                        <div class="form-column py-4">
+                           <div class="header d-flex justify-content-end">
+                              <img
+                                 src="Assets/images/logo.png"
+                                 alt="logo"
+                                 class="img-fluid modal-logo"
+                              />
+                           </div>
+                           <div class="form-tab pt-4">
+                              <ul
+                                 class="nav nav-tabs"
+                                 id="myTab"
+                                 role="tablist"
+                              >
+                                 <li class="nav-item" role="presentation">
+                                    <button
+                                       class="nav-link active"
+                                       id="login-tab"
+                                       data-bs-toggle="tab"
+                                       data-bs-target="#login"
+                                       type="button"
+                                       role="tab"
+                                       aria-controls="home"
+                                       aria-selected="true"
+                                    >
+                                       login
+                                    </button>
+                                 </li>
+                                 <li class="nav-item" role="presentation">
+                                    <button
+                                       class="nav-link"
+                                       id="register-tab"
+                                       data-bs-toggle="tab"
+                                       data-bs-target="#register"
+                                       type="button"
+                                       role="tab"
+                                       aria-controls="profile"
+                                       aria-selected="false"
+                                    >
+                                       register
+                                    </button>
+                                 </li>
+                              </ul>
+                              <div class="tab-content" id="myTabContent">
+                                 <div
+                                    class="tab-pane fade show active pt-4"
+                                    id="login"
+                                    role="tabpanel"
+                                    aria-labelledby="login-tab"
+                                 >
+                                    <div class="tab-inner">
+                                       <div class="form-group mb-3">
+                                          <label for="emailId"
+                                             >Your Email ID</label
+                                          >
+                                          <input
+                                             type="text"
+                                             class="form-control"
+                                          />
+                                       </div>
+                                       <div
+                                          class="form-group position-relative mb-2"
+                                       >
+                                          <label for="emailId">Password</label>
+                                          <input
+                                             type="password"
+                                             class="form-control pass"
+                                          />
+                                          <div class="pass-view">
+                                             <i class="fa-regular fa-eye"></i>
+                                             <i
+                                                class="fa-regular fa-eye-slash"
+                                                style="display: none"
+                                             ></i>
+                                          </div>
+                                       </div>
+                                       <div
+                                          class="d-flex justify-content-between align-items-center mb-3"
+                                       >
+                                          <div class="remember-me">
+                                             <div class="form-check">
+                                                <input
+                                                   class="form-check-input"
+                                                   type="checkbox"
+                                                   value=""
+                                                   id="flexCheckDefault"
+                                                />
+                                                <label
+                                                   class="form-check-label pb-0"
+                                                   for="flexCheckDefault"
+                                                >
+                                                   Remember Me
+                                                </label>
+                                             </div>
+                                          </div>
+                                          <div class="f-password">
+                                             <span>Forgot password</span>
+                                          </div>
+                                       </div>
+                                       <div
+                                          class="form-group text-center form-tab-footer"
+                                       >
+                                          <button
+                                             type="button"
+                                             class="btn btn-theme w-75 mb-3"
+                                          >
+                                             Login
+                                          </button>
+                                          <p>
+                                             Don’t have any account?
+                                             <span class="theme-color"
+                                                >Sign Up</span
+                                             >
+                                          </p>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div
+                                    class="tab-pane fade pt-4"
+                                    id="register"
+                                    role="tabpanel"
+                                    aria-labelledby="register-tab"
+                                 >
+                                    <div class="tab-inner">
+                                       <div class="form-group mb-3">
+                                          <label for="name">Name</label>
+                                          <input
+                                             type="text"
+                                             class="form-control"
+                                          />
+                                       </div>
+                                       <div class="form-group mb-3">
+                                          <label for="emailId"
+                                             >Your Email ID</label
+                                          >
+                                          <input
+                                             type="text"
+                                             class="form-control"
+                                          />
+                                       </div>
+                                       <div
+                                          class="form-group position-relative mb-3"
+                                       >
+                                          <label for="emailId">Password</label>
+                                          <input
+                                             type="password"
+                                             class="form-control"
+                                          />
+                                       </div>
+                                       <div
+                                          class="form-group position-relative mb-3"
+                                       >
+                                          <label for="emailId"
+                                             >Confirm Password</label
+                                          >
+                                          <input
+                                             type="password"
+                                             class="form-control"
+                                          />
+                                       </div>
+
+                                       <div
+                                          class="form-group text-center form-tab-footer"
+                                       >
+                                          <p class="mb-3">
+                                             I agree with
+                                             <span class="theme-color"
+                                                >terms and conditions</span
+                                             >
+                                          </p>
+                                          <button
+                                             type="button"
+                                             class="btn btn-theme w-75 mb-3"
+                                          >
+                                             Register
+                                          </button>
+                                          <p>
+                                             Already have any account?
+                                             <span class="theme-color"
+                                                >Login</span
+                                             >
+                                          </p>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script
+         src="https://kit.fontawesome.com/31c5ce1ad1.js"
+         crossorigin="anonymous"
+      ></script>
+      <script
+         src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+         crossorigin="anonymous"
+      ></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+
+      <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/bootstrap-select.min.js"></script> -->
+      <script src="js/script.js"></script>
+      <script>
+         // primary steps
+
+         let currentStep = 1;
+         const totalSteps = 5;
+
+         function showStep(step) {
+            for (let i = 1; i <= totalSteps; i++) {
+               const indicator = document.getElementById(`step-${i}-indicator`);
+               const content = document.getElementById(`step-${i}-content`);
+
+               if (i < step) {
+                  // Completed step
+                  indicator.classList.add('completed');
+                  indicator.classList.remove('active');
+                  content.classList.remove('active');
+               } else if (i === step) {
+                  // Current active step
+                  indicator.classList.add('active');
+                  indicator.classList.remove('completed');
+                  content.classList.add('active');
+               } else {
+                  // Future steps
+                  indicator.classList.remove('active', 'completed');
+                  content.classList.remove('active');
+               }
+            }
+
+            // Update navigation buttons
+            document.getElementById('prevBtn').style.display =
+               step === 1 ? 'none' : 'inline-block';
+            document.getElementById('nextBtn').innerText =
+               step === totalSteps ? 'Submit' : 'Continue';
+         }
+
+         function nextStep() {
+            if (currentStep === totalSteps) {
+               document.getElementById('multiStepForm').submit();
+               return;
+            }
+            if (!validateStep(currentStep)) {
+               alert('Please fill out all required fields before proceeding.');
+               return;
+            }
+            currentStep++;
+            showStep(currentStep);
+         }
+
+         function prevStep() {
+            if (currentStep > 1) {
+               currentStep--;
+               showStep(currentStep);
+            }
+         }
+
+         function validateStep(step) {
+            const stepContent = document.getElementById(`step-${step}-content`);
+            const requiredFields = stepContent.querySelectorAll('[required]');
+            for (let field of requiredFields) {
+               if (!field.value.trim()) {
+                  return false;
+               }
+            }
+            return true;
+         }
+
+         // Initialize
+         showStep(currentStep);
+      </script>
+   </body>
+</html>
